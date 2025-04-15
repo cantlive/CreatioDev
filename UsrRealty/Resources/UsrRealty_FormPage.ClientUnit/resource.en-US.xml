@@ -3,9 +3,13 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Realty form page" />
+			<Item Name="LocalizableStrings.addRecord_04lyyui_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_hajmikj_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_iet80as_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.addRecord_ojsgnwi_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_shgi2at_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.Button_v27f552_caption.Value" Value="Push me" />
+			<Item Name="LocalizableStrings.NumberInput_kimsqeg_label.Value" Value="Number" />
 		</Items>
 	</Group>
 </Resources>
