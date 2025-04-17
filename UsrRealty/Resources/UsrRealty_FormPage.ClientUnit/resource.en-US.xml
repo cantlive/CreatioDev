@@ -9,6 +9,7 @@
 			<Item Name="LocalizableStrings.addRecord_ojsgnwi_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_shgi2at_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.AreaCannotBeLess.Value" Value="Area cannot be less than 10 m2." />
+			<Item Name="LocalizableStrings.Button_kghor1p_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.Button_v27f552_caption.Value" Value="Push me" />
 			<Item Name="LocalizableStrings.ExpansionPanel_3617r29_title.Value" Value="Realty visit" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_8et7xo0_caption.Value" Value="New" />
@@ -17,6 +18,7 @@
 			<Item Name="LocalizableStrings.GridDetailRefreshBtn_oc0m08m_caption.Value" Value="Refresh" />
 			<Item Name="LocalizableStrings.GridDetailSearchFilter_jl8znvy_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_fzvlz4a_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.MenuItem_l3isjs5_caption.Value" Value="Run calculation average realty price process" />
 			<Item Name="LocalizableStrings.NumberInput_kimsqeg_label.Value" Value="Number" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price cannot be less than 50 USD." />
 		</Items>

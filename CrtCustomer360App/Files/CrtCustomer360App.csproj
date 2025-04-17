@@ -324,31 +324,46 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
-	</ItemGroup>
-	<ItemGroup Label="Package References">
-		<Reference Include="CrtCustomer360Mobile">
-			<HintPath>$(RelativePkgFolderPath)/CrtCustomer360Mobile/$(StandalonePackageAssemblyPath)/CrtCustomer360Mobile.dll</HintPath>
+		<Reference Include="Terrasoft.Authentication.Contract">
+			<HintPath>$(CoreLibPath)/Terrasoft.Authentication.Contract.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="Terrasoft.SmsIntegration">
+			<HintPath>$(CoreLibPath)/Terrasoft.SmsIntegration.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Creatio.Copilot.Abstractions">
+			<HintPath>$(CoreLibPath)/Creatio.Copilot.Abstractions.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup Label="Package References">
 		<Reference Include="CrtCore">
 			<HintPath>$(RelativePkgFolderPath)/CrtCore/$(StandalonePackageAssemblyPath)/CrtCore.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="CrtCustomer360Mobile">
+			<HintPath>$(RelativePkgFolderPath)/CrtCustomer360Mobile/$(StandalonePackageAssemblyPath)/CrtCustomer360Mobile.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
 	<ItemGroup Label="Standalone package external assembly references" />
 	<ItemGroup Label="Entity Files">
-		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountBillingInfo/AccountBillingInfo.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountBillingInfo/AccountBillingInfo.cs')" />
-		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/Contact/Contact.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/Contact/Contact.cs')" />
-		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/BaseAddress/BaseAddress.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/BaseAddress/BaseAddress.cs')" />
-		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountCategory/AccountCategory.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountCategory/AccountCategory.cs')" />
-		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/ContactType/ContactType.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/ContactType/ContactType.cs')" />
-		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountAddress/AccountAddress.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountAddress/AccountAddress.cs')" />
-		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AddressType/AddressType.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AddressType/AddressType.cs')" />
-		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountType/AccountType.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountType/AccountType.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/Account/Account.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/Account/Account.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountAddress/AccountAddress.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountAddress/AccountAddress.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountBillingInfo/AccountBillingInfo.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountBillingInfo/AccountBillingInfo.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountCategory/AccountCategory.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountCategory/AccountCategory.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountType/AccountType.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AccountType/AccountType.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AddressType/AddressType.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/AddressType/AddressType.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/BaseAddress/BaseAddress.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/BaseAddress/BaseAddress.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/Contact/Contact.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/Contact/Contact.cs')" />
 		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/ContactAddress/ContactAddress.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/ContactAddress/ContactAddress.cs')" />
+		<Compile Remove="$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/ContactType/ContactType.cs" Condition="Exists('$(RelativePkgFolderPath)/CrtCustomer360App/Schemas/ContactType/ContactType.cs')" />
 	</ItemGroup>
 	<ItemGroup Label="3rd Party References"></ItemGroup>
 	<Target Name="Paths" BeforeTargets="BeforeCompile">
