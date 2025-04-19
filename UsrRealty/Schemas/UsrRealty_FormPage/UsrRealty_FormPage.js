@@ -1,4 +1,4 @@
-define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/()/**SCHEMA_ARGS*/ {
+define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_DEPS*/, function/**SCHEMA_ARGS*/(sdk)/**SCHEMA_ARGS*/ {
 	return {
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
@@ -89,6 +89,22 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 				"parentName": "Button_kghor1p",
 				"propertyName": "menuItems",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "RunWebServiceMaxPriceMenuItem",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MenuItem_1spz5eo_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "usr.RunWebServiceButtonRequest"
+					},
+					"icon": "tag-icon"
+				},
+				"parentName": "Button_kghor1p",
+				"propertyName": "menuItems",
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -1014,7 +1030,45 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 
                   return next?.handle(request);
                 }
+            },
+          {
+            request: "usr.RunWebServiceButtonRequest",
+            handler: async (request, next) => {
+                console.log("Run web service button works...");
+            
+                var typeObject = await request.$context.PDS_UsrType_r8hi374;
+                var typeId = "";
+                if (typeObject) {
+                    typeId = typeObject.value;
+                }
+            
+                var offerTypeObject = await request.$context.PDS_UsrOfferType_vacsk61;
+                var offerTypeId = "";
+                if (offerTypeObject) {
+                    offerTypeId = offerTypeObject.value;
+                }
+            
+                const httpClientService = new sdk.HttpClientService();
+            
+                const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
+                const transferName = "rest";
+                const serviceName = "RealtyService";
+                const methodName = "GetMaxPriceByTypeId";
+                const endpoint = Terrasoft.combinePath(baseUrl, transferName, serviceName, methodName);
+              
+                var params = {
+                    realtyTypeId: typeId,
+                    realtyOfferTypeId: offerTypeId,
+                    entityName: "UsrRealty"
+                };
+            
+                const response = await httpClientService.post(endpoint, params);
+            
+                console.log("response max price = " + response.body.GetMaxPriceByTypeIdResult);
+            
+                return next?.handle(request);
             }
+          }
         ]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{
