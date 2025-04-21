@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "6ae23649-43ae-46d8-b799-757b3b3314f6",
+    "Name": "UsrGetGoRestContactMainProcess",
+    "ModifiedOnUtc": "\/Date(1745244437000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Main process to get contacts from GoRest"
+  }
+}
