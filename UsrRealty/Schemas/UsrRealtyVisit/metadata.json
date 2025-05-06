@@ -18,9 +18,13 @@
 = MetaData.Schema.EG1.BK4.["8140d7e7-fb91-4999-8347-543345440efb"].CK2.["c803a450-c8dc-47a4-b704-7125c23db317"].BL7 "53818048-7868-48f6-ada0-0ebaa65af628"
 = MetaData.Schema.EG1.JC1 []
 = MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
++ MetaData.Schema.D29 "null"
++ MetaData.Schema.D30 "null"
++ MetaData.Schema.D31 "null"
++ MetaData.Schema.D38 true
 + MetaData.Schema.D2 {
   "UId": "8e3ab949-ea4c-508a-189b-a68ea8cce238",
-  "A2": "UsrManager",
+  "A2": "UsrOwner",
   "A3": "0aa5cafd-e134-40a0-b27d-7fccbb4d4855",
   "A4": "0aa5cafd-e134-40a0-b27d-7fccbb4d4855",
   "A5": "df82f62c-601d-4847-9a6f-c15f371f43d6",
@@ -31,8 +35,8 @@
     "FB1": 3,
     "FB2": "4f367ca9-549b-4a1a-b64e-a40123f52ac0"
   },
-  "E17": "UsrManagerId",
-  "E18": "UsrManagerName"
+  "E17": "UsrOwnerId",
+  "E18": "UsrOwnerName"
 }
 + MetaData.Schema.D2 {
   "UId": "7d7cfe38-cf95-2e87-67e8-6487501728a5",

@@ -16,65 +16,7 @@
       "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
       "AD4": {
         "JI0": "Terrasoft.Core.BusinessRules.BusinessRules",
-        "BRS1": [
-          {
-            "JI0": "Terrasoft.Core.BusinessRules.BusinessRule",
-            "UId": "ba70969f-8681-4e42-7224-7b180fd30ff0",
-            "BR1": [
-              {
-                "JI0": "Terrasoft.Core.BusinessRules.Models.BusinessRuleCase",
-                "UId": "46872ee4-22d2-99b8-5e2b-0e77e51d98a6",
-                "BRC1": {
-                  "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleGroupCondition",
-                  "UId": "5dcaa710-8f90-e932-b97e-553f7d0a96b2",
-                  "BGC1": 1,
-                  "BGC2": [
-                    {
-                      "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleCondition",
-                      "UId": "7adf51ff-686e-0784-72f5-fb710ab093e7",
-                      "BCO1": {
-                        "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleAttributeExpression",
-                        "UId": "37525f26-dff5-3715-c7f5-a035140640c5",
-                        "BRE1": "Lookup",
-                        "BRE2": "AttributeValue",
-                        "BRX1": "PDS_UsrType_r8hi374",
-                        "BRX2": "null"
-                      },
-                      "BCO2": {
-                        "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleValueExpression",
-                        "UId": "91a59a3c-7770-8a33-85a6-101b03584d3f",
-                        "BRE1": "Lookup",
-                        "BRE3": "UsrRealtyType",
-                        "BVE1": "9e982fd3-5445-4332-a93d-8762f02e6226"
-                      },
-                      "BCO3": 2
-                    }
-                  ]
-                },
-                "BRC2": [
-                  {
-                    "JI0": "Terrasoft.Core.BusinessRules.Models.Actions.BusinessRuleActionShowElement",
-                    "UId": "5c1ac242-0d8c-049a-2409-ebd18500d80b",
-                    "BRA4": "RealtyComment"
-                  }
-                ]
-              }
-            ],
-            "BR2": [
-              {
-                "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
-                "UId": "5c228603-7bc1-7e52-81b6-6a7878493307",
-                "BRT2": 2
-              },
-              {
-                "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
-                "UId": "a695af3f-6184-4216-fec7-024f783b2f00",
-                "BRT1": "PDS_UsrType_r8hi374"
-              }
-            ],
-            "BR3": "BusinessRule_b4ad960"
-          }
-        ]
+        "BRS1": []
       }
     }
   }

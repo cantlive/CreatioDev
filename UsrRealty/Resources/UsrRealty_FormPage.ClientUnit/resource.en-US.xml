@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Realty form page" />
+			<Item Name="LocalizableStrings.AddingVisitsMenuItem_caption.Value" Value="Run adding visits process " />
 			<Item Name="LocalizableStrings.addRecord_04lyyui_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_hajmikj_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_iet80as_caption.Value" Value="Add new" />
@@ -11,6 +12,7 @@
 			<Item Name="LocalizableStrings.AreaCannotBeLess.Value" Value="Area cannot be less than 10 m2." />
 			<Item Name="LocalizableStrings.Button_kghor1p_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.Button_v27f552_caption.Value" Value="Push me" />
+			<Item Name="LocalizableStrings.CalcAvgPriceMenuItem_caption.Value" Value="Run calculation average realty price process" />
 			<Item Name="LocalizableStrings.ExpansionPanel_3617r29_title.Value" Value="Realty visit" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_8et7xo0_caption.Value" Value="New" />
 			<Item Name="LocalizableStrings.GridDetailExportDataBtn_04qsymk_caption.Value" Value="Export to Excel" />
@@ -20,8 +22,10 @@
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_fzvlz4a_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.MenuItem_1spz5eo_caption.Value" Value="Run max price calculation service" />
 			<Item Name="LocalizableStrings.MenuItem_l3isjs5_caption.Value" Value="Run calculation average realty price process" />
+			<Item Name="LocalizableStrings.MenuItem_zs1f9yy_caption.Value" Value="Run adding visits process " />
 			<Item Name="LocalizableStrings.NumberInput_kimsqeg_label.Value" Value="Number" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price cannot be less than 50 USD." />
+			<Item Name="LocalizableStrings.PushMeButton_caption.Value" Value="Push me" />
 		</Items>
 	</Group>
 </Resources>

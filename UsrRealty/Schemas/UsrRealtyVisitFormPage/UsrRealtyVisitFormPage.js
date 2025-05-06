@@ -3,7 +3,7 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "insert",
-				"name": "DateTimePicker_b05fi27",
+				"name": "VisitDateTime",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -23,7 +23,7 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 			},
 			{
 				"operation": "insert",
-				"name": "ComboBox_13bk5sw",
+				"name": "PotentialCustomer",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -56,13 +56,13 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 						"params": {}
 					}
 				},
-				"parentName": "ComboBox_13bk5sw",
+				"parentName": "PotentialCustomer",
 				"propertyName": "listActions",
 				"index": 0
 			},
 			{
 				"operation": "insert",
-				"name": "Input_giz5lr7",
+				"name": "Comment",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -82,7 +82,7 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 			},
 			{
 				"operation": "insert",
-				"name": "ComboBox_0ary6aj",
+				"name": "Owner",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
@@ -96,7 +96,12 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 					"control": "$UsrRealtyVisitDS_UsrManager_74x0wye",
 					"listActions": [],
 					"showValueAsLink": true,
-					"controlActions": []
+					"controlActions": [],
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"tooltip": "",
+					"valueDetails": null
 				},
 				"parentName": "MainContainer",
 				"propertyName": "items",
@@ -115,7 +120,7 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 						"params": {}
 					}
 				},
-				"parentName": "ComboBox_0ary6aj",
+				"parentName": "Owner",
 				"propertyName": "listActions",
 				"index": 0
 			}
@@ -144,7 +149,7 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 					},
 					"UsrRealtyVisitDS_UsrManager_74x0wye": {
 						"modelConfig": {
-							"path": "UsrRealtyVisitDS.UsrManager"
+							"path": "UsrRealtyVisitDS.UsrOwner"
 						}
 					}
 				}

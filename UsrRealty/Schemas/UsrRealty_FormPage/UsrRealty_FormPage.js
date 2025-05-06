@@ -51,6 +51,27 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 			},
 			{
 				"operation": "insert",
+				"name": "PushMeButton",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(PushMeButton_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "left-icon",
+					"visible": false,
+					"icon": "checkmark-icon",
+					"clicked": {
+						"request": "usr.PushButtonRequest"
+					},
+					"clickMode": "default"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
 				"name": "Button_kghor1p",
 				"values": {
 					"type": "crt.Button",
@@ -66,14 +87,14 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 				},
 				"parentName": "CardToggleContainer",
 				"propertyName": "items",
-				"index": 0
+				"index": 1
 			},
 			{
 				"operation": "insert",
 				"name": "CalcAvgPriceMenuItem",
 				"values": {
 					"type": "crt.MenuItem",
-					"caption": "#ResourceString(MenuItem_l3isjs5_caption)#",
+					"caption": "#ResourceString(CalcAvgPriceMenuItem_caption)#",
 					"visible": true,
 					"clicked": {
 						"request": "crt.RunBusinessProcessRequest",
@@ -108,24 +129,25 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 			},
 			{
 				"operation": "insert",
-				"name": "PushMeButton",
+				"name": "AddingVisitsMenuItem",
 				"values": {
-					"type": "crt.Button",
-					"caption": "#ResourceString(Button_v27f552_caption)#",
-					"color": "accent",
-					"disabled": false,
-					"size": "medium",
-					"iconPosition": "left-icon",
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(AddingVisitsMenuItem_caption)#",
 					"visible": true,
-					"icon": "checkmark-icon",
 					"clicked": {
-						"request": "usr.PushButtonRequest"
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrAddRealtyVisitsProcess",
+							"processRunType": "ForTheSelectedPage",
+							"showNotification": true,
+							"recordIdProcessParameterName": "RealtyId"
+						}
 					},
-					"clickMode": "default"
+					"icon": "edit-button-icon"
 				},
-				"parentName": "CardToggleContainer",
-				"propertyName": "items",
-				"index": 1
+				"parentName": "Button_kghor1p",
+				"propertyName": "menuItems",
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -274,7 +296,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 					"labelPosition": "auto",
 					"control": "$PDS_UsrComment_xydk157",
 					"multiline": false,
-					"visible": false,
+					"visible": true,
 					"readonly": false,
 					"placeholder": "",
 					"tooltip": ""
@@ -285,7 +307,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 			},
 			{
 				"operation": "insert",
-				"name": "Manager",
+				"name": "ComissionPercent",
 				"values": {
 					"layoutConfig": {
 						"column": 2,
@@ -293,18 +315,13 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 						"colSpan": 1,
 						"rowSpan": 1
 					},
-					"type": "crt.ComboBox",
-					"label": "$Resources.Strings.PDS_UsrManager_b5k2qsw",
-					"labelPosition": "auto",
-					"control": "$PDS_UsrManager_b5k2qsw",
-					"listActions": [],
-					"showValueAsLink": true,
-					"controlActions": [],
-					"visible": true,
-					"readonly": false,
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrOfferTypeUsrComissionPercent",
+					"control": "$PDS_UsrOfferTypeUsrComissionPercent",
+					"readonly": true,
 					"placeholder": "",
-					"tooltip": "",
-					"valueDetails": null
+					"labelPosition": "auto",
+					"tooltip": ""
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
@@ -327,7 +344,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 					"listActions": [],
 					"showValueAsLink": true,
 					"controlActions": [],
-					"visible": true,
+					"visible": false,
 					"readonly": false,
 					"placeholder": "",
 					"tooltip": "",
@@ -339,7 +356,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 			},
 			{
 				"operation": "insert",
-				"name": "RealtyNumber",
+				"name": "Manager",
 				"values": {
 					"layoutConfig": {
 						"column": 2,
@@ -347,15 +364,20 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 						"colSpan": 1,
 						"rowSpan": 1
 					},
-					"type": "crt.Input",
-					"label": "$Resources.Strings.PDS_UsrColumn8_ln2o743",
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_UsrManager_b5k2qsw",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrColumn8_ln2o743",
-					"multiline": false,
-					"visible": true,
-					"readonly": true,
-					"placeholder": "",
-					"tooltip": ""
+					"control": "$PDS_UsrManager_b5k2qsw",
+					"listActions": null,
+					"showValueAsLink": true,
+					"controlActions": null,
+					"visible": false,
+					"readonly": false,
+					"placeholder": null,
+					"tooltip": null,
+					"valueDetails": null,
+					"isSimpleLookup": null,
+					"secondaryDisplayValue": null
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
@@ -378,7 +400,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 					"listActions": [],
 					"showValueAsLink": true,
 					"controlActions": [],
-					"visible": true,
+					"visible": false,
 					"readonly": false,
 					"placeholder": "",
 					"tooltip": "",
@@ -390,7 +412,7 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 			},
 			{
 				"operation": "insert",
-				"name": "ComissionPercent",
+				"name": "RealtyNumber",
 				"values": {
 					"layoutConfig": {
 						"column": 2,
@@ -398,12 +420,14 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 						"colSpan": 1,
 						"rowSpan": 1
 					},
-					"type": "crt.NumberInput",
-					"label": "$Resources.Strings.PDS_UsrOfferTypeUsrComissionPercent",
-					"control": "$PDS_UsrOfferTypeUsrComissionPercent",
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_UsrColumn8_ln2o743",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrColumn8_ln2o743",
+					"multiline": false,
+					"visible": false,
 					"readonly": true,
 					"placeholder": "",
-					"labelPosition": "auto",
 					"tooltip": ""
 				},
 				"parentName": "GeneralInfoTabContainer",
@@ -829,6 +853,11 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
 					"PDS_UsrComment_xydk157": {
 						"modelConfig": {
 							"path": "PDS.UsrComment"
+						},
+						"validators": {
+							"required": {
+								"type": "crt.Required"
+							}
 						}
 					},
 					"PDS_UsrOfferType_vacsk61": {
@@ -1023,10 +1052,24 @@ define("UsrRealty_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA
                   if (request.attributeName === "PDS_UsrPrice_zckt3it" || request.attributeName === "PDS_UsrOfferTypeUsrComissionPercent")
                   {
                     var price = await request.$context.PDS_UsrPrice_zckt3it;
+                    
+                    if (request.attributeName == "PDS_UsrPrice_zckt3it") {
+                      const sysSettingsService = new sdk.SysSettingsService();
+                      const minPriceToRequireRealtyComment = await sysSettingsService.getByCode("MinPriceToRequireRealtyComment");
+
+                      if (price > minPriceToRequireRealtyComment.value) {
+                          request.$context.enableAttributeValidator('PDS_UsrComment_xydk157', 'required');
+                      } else {
+                          request.$context.disableAttributeValidator('PDS_UsrComment_xydk157', 'required');
+                      }
+                    }
+                    
                     var percent = await request.$context.PDS_UsrOfferTypeUsrComissionPercent;
                     var comission = price * percent / 100;
                      request.$context.PDS_UsrComission_605yqww = comission;
                   }
+
+                 
 
                   return next?.handle(request);
                 }

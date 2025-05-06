@@ -15,18 +15,25 @@ namespace Terrasoft.Configuration
         [OperationContract]
         [WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.Wrapped,
             RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        public decimal GetMaxPriceByTypeId(string realtyTypeId, string realtyOfferTypeId)
+        public decimal GetMaxPriceByTypeId(string realtyTypeId)
         {
-            if (string.IsNullOrEmpty(realtyTypeId) || string.IsNullOrEmpty(realtyOfferTypeId))
+            if (string.IsNullOrEmpty(realtyTypeId))
             {
                 return -1;
             }
+
+            Select selectRealtyOfferTypeId = new Select(UserConnection)
+                .Column("Id")
+                .From("UsrRealtyOfferType")
+                .Where("Name").IsEqual(Column.Parameter("Sale")) as Select;
+
+            Guid realtyOfferTypeId = selectRealtyOfferTypeId.ExecuteScalar<Guid>();
 
             Select select = new Select(UserConnection)
                 .Column(Func.Max("UsrPrice"))
                 .From("UsrRealty")
                 .Where("UsrTypeId").IsEqual(Column.Parameter(new Guid(realtyTypeId)))
-                .And("UsrOfferTypeId").IsEqual(Column.Parameter(new Guid(realtyOfferTypeId))) as Select;
+                .And("UsrOfferTypeId").IsEqual(Column.Parameter(realtyOfferTypeId)) as Select;
 
             decimal result = select.ExecuteScalar<decimal>();
             return result;
